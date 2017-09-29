@@ -58,7 +58,15 @@ class TicTacToe {
     }
 
     getWinner() {
-
+        if (this.row0[0] === this.row0[1] && this.row0[1] === this.row0[2] && this.row0[0]!== null) {this.winner = this.row0[0];}
+        if (this.row1[0] === this.row1[1] && this.row1[1] === this.row1[2] && this.row1[0]!== null) {this.winner = this.row1[0];}
+        if (this.row2[0] === this.row2[1] && this.row2[1] === this.row2[2] && this.row2[0]!== null) {this.winner = this.row2[0];}
+        if (this.row0[0] === this.row1[0] && this.row1[0] === this.row2[0] && this.row0[0]!== null) {this.winner = this.row0[0];}
+        if (this.row0[1] === this.row1[1] && this.row1[1] === this.row2[1] && this.row0[1]!== null) {this.winner = this.row0[1];}
+        if (this.row0[2] === this.row1[2] && this.row1[2] === this.row2[2] && this.row0[2]!== null) {this.winner = this.row0[2];}
+        if (this.row0[0] === this.row1[1] && this.row1[1] === this.row2[2] && this.row0[0]!== null) {this.winner = this.row0[0];}
+        if (this.row0[2] === this.row1[1] && this.row1[1] === this.row2[0] && this.row0[2]!== null) {this.winner = this.row0[2];}
+        return this.winner;
     }
 
     noMoreTurns() {
